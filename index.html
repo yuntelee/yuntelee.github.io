@@ -4,111 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>yunte's portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        head {
-            padding-left: 150px;
-            padding-right: 150px;
-            padding-top: 60px;
-            position: relative;
-        }
-        
-        body {
-            padding-left: 150px;
-            padding-right: 150px;
-            padding-top: 60px;
-            position: relative;
-            font-family: 'Afacad', sans-serif;
-            color: #1E1E1E;
-            background-color: #F8F5F2;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: text-decoration 0.3s;
-        }
-        
-        a:hover {
-            color: grey;
-            text-decoration: dotted;
-        }
-        
-        .underline {
-            text-decoration: underline;
-        }
-        
-        .default-divider {
-            margin: 20px;
-        }
-        
-        .top-left-image {
-            width: 69px;
-            height: 69px;
-            background-image: url('./assets/Autumn.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        
-        .intro-text {
-            font-size: 35px;
-            display: block;
-            line-height: 1.1;
-        }
-        
-        .experience-text {
-            font-style: italic;
-            font-size: 20px;
-            display: block;
-        }
-        
-        .grey-text {
-            color: grey;
-        }
-        
-        .projects-text {
-            font-size: 30px;
-            text-align: center;
-            display: block;
-        }
-        
-        .col-12 {
-            margin-bottom: 40px;
-        }
-        
-        .img-fluid {
-            border-radius: 8px;
-            width: 92%;
-        }
-        
-        .project-name {
-            font-size: 20px;
-            line-height: 2;
-        }
-        
-        .contacts-text {
-            font-size: 18px;
-            text-align: center;
-            display: block;
-            line-height: 1.2;
-        }
-        
-        .bottom-divider {
-            margin: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/Autumn.png" type="image/png">
 
-    <div class="top-left-image"></div>
+    <a href="index.html">
+        <div class="top-left-image"></div>
+    </a>
     <div class="default-divider"></div>
-
 </head>
 
-<body>
+<body onload="document.body.style.opacity='1'">
 
     <span class="intro-text">
         Hey, I’m Yunte (pronounced yoon-té)! I study CS and music at Columbia.
@@ -131,31 +42,36 @@
         Projects
     </span>
 
-    <div class="default-divider"></div>
 
+
+    <div class="default-divider"></div>
     <div class="row">
         <div class="col-lg-4 col-12">
-            <a href="quillin.html" class="d-block">
-                <img src="./assets/quillin.png" class="img-fluid">
-                <br>
+            <a href="quillin.html">
+                <div class="image-container">
+                    <img src="./assets/quillin.png" class="img-fluid zoom-image" alt="Quillin">
+                </div>
                 <span class="project-name">Quillin'</span>
             </a>
         </div>
         <div class="col-lg-4 col-12">
             <a href="canvasredesign.html" class="d-block">
-                <img src="./assets/canvasredesign.png" class="img-fluid">
-                <br>
+                <div class="image-container">
+                    <img src="./assets/canvasredesign.png" class="img-fluid zoom-image" alt="Canvas Redesign">
+                </div>
                 <span class="project-name">Canvas Redesign</span>
             </a>
         </div>
         <div class="col-lg-4 col-12">
             <a href="visualmixer.html" class="d-block">
-                <img src="./assets/visualmixer.png" class="img-fluid">
-                <br>
+                <div class="image-container">
+                    <img src="./assets/visualmixer.png" class="img-fluid zoom-image" alt="Visual Mixer">
+                </div>
                 <span class="project-name">Visual Mixer</span>
             </a>
         </div>
     </div>
+
 
     <div class="bottom-divider"></div>
 
@@ -163,6 +79,10 @@
         Contacts<br>
         <a href="mailto:jyl2199@columbia.edu" target="_blank">jyl2199@columbia.edu</a> | <a href="https://linkedin.com/in/jyl2199" target="_blank">linkedin.com/in/jyl2199</a>
     </span>
+
+    <div class="bottom-divider"></div>
+
+
 </body>
 
 </html>
