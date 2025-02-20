@@ -11,7 +11,9 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
     position: relative;
-    font-family: 'Afacad', sans-serif;
+    font-family: "Raleway", serif;
+    font-weight: light;
+    font-style: normal;
     color: #1E1E1E;
     background-color: #F8F5F2;
     opacity: 0;
@@ -50,14 +52,16 @@ a:hover {
 }
 
 .intro-text {
-    font-size: 35px;
+    font-size: 32px;
+    /* Reduced by 3 units */
     display: block;
     line-height: 1.1;
 }
 
 .experience-text {
     font-style: italic;
-    font-size: 20px;
+    font-size: 17px;
+    /* Reduced by 3 units */
     display: block;
 }
 
@@ -66,7 +70,8 @@ a:hover {
 }
 
 .projects-text {
-    font-size: 30px;
+    font-size: 27px;
+    /* Reduced by 3 units */
     text-align: center;
     display: block;
 }
@@ -97,25 +102,30 @@ a:hover {
     position: relative;
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .zoom-image {
     display: block;
     width: 100%;
     transition: transform 0.5s ease;
+    border-radius: 8px;
 }
 
 .image-container:hover .zoom-image {
     transform: scale(1.1);
+    border-radius: 8px;
 }
 
 .project-name {
-    font-size: 20px;
+    font-size: 17px;
+    /* Reduced by 3 units */
     line-height: 2;
 }
 
 .contacts-text {
-    font-size: 18px;
+    font-size: 15px;
+    /* Reduced by 3 units */
     text-align: center;
     display: block;
     line-height: 1.2;
@@ -143,18 +153,23 @@ a:hover {
         background-repeat: no-repeat;
     }
     .intro-text {
-        font-size: 28px;
+        font-size: 25px;
+        /* Reduced by 3 units */
     }
     .experience-text {
-        font-size: 18px;
+        font-size: 15px;
+        /* Reduced by 3 units */
     }
     .projects-text {
-        font-size: 24px;
+        font-size: 21px;
+        /* Reduced by 3 units */
     }
     .project-name {
-        font-size: 18px;
+        font-size: 15px;
+        /* Reduced by 3 units */
     }
     .contacts-text {
-        font-size: 16px;
+        font-size: 13px;
+        /* Reduced by 3 units */
     }
 }
