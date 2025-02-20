@@ -135,6 +135,13 @@ a:hover {
         padding-right: 20px;
         padding-top: 20px;
     }
+    .top-left-image {
+        width: 59px;
+        height: 59px;
+        background-image: url('./assets/Autumn.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .intro-text {
         font-size: 28px;
     }
