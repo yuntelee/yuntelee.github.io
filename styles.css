@@ -128,7 +128,7 @@ a:hover {
 
 /* Media query for smaller screens */
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     head,
     body {
         padding-left: 20px;
