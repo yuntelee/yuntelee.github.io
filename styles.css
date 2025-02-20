@@ -9,6 +9,7 @@ body {
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 60px;
+    padding-bottom: 60px;
     position: relative;
     font-family: 'Afacad', sans-serif;
     color: #1E1E1E;
@@ -18,7 +19,7 @@ body {
 }
 
 body.fade-in {
-    opacity: 0;
+    opacity: 1;
 }
 
 a {
@@ -122,4 +123,31 @@ a:hover {
 
 .bottom-divider {
     margin: 40px;
+}
+
+
+/* Media query for smaller screens */
+
+@media (max-width: 768px) {
+    head,
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .intro-text {
+        font-size: 28px;
+    }
+    .experience-text {
+        font-size: 18px;
+    }
+    .projects-text {
+        font-size: 24px;
+    }
+    .project-name {
+        font-size: 18px;
+    }
+    .contacts-text {
+        font-size: 16px;
+    }
 }
