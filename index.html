@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         head {
             padding-left: 150px;
@@ -27,6 +26,21 @@
             font-family: 'Afacad', sans-serif;
             color: #1E1E1E;
             background-color: #F8F5F2;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: text-decoration 0.3s;
+        }
+        
+        a:hover {
+            color: grey;
+            text-decoration: dotted;
+        }
+        
+        .underline {
+            text-decoration: underline;
         }
         
         .default-divider {
@@ -84,10 +98,6 @@
             line-height: 1.2;
         }
         
-        .default-divider {
-            margin: 20px;
-        }
-        
         .bottom-divider {
             margin: 40px;
         }
@@ -109,7 +119,7 @@
     <div class="default-divider"></div>
 
     <span class="experience-text">
-        Currently: Marketing Intern at Munice
+        Currently: Marketing Intern at <a href="https://nightly.so/en" target="_blank"><span class="underline">Munice</span> <i class="fas fa-external-link-alt fa-xs"></i></a>
     </span>
     <span class="experience-text grey-text">
         Previously: Summer Analyst at Botticelli Capital and Intern at KOICA
@@ -124,20 +134,26 @@
     <div class="default-divider"></div>
 
     <div class="row">
-        <div class="col-lg-4  col-12">
-            <img src="./assets/project1.png" class="img-fluid">
-            <br>
-            <span class="project-name">Quillin'</span>
+        <div class="col-lg-4 col-12">
+            <a href="quillin.html" class="d-block">
+                <img src="./assets/quillin.png" class="img-fluid">
+                <br>
+                <span class="project-name">Quillin'</span>
+            </a>
         </div>
         <div class="col-lg-4 col-12">
-            <img src="./assets/project2.png" class="img-fluid">
-            <br>
-            <span class="project-name">Canvas Redesign</span>
+            <a href="canvasredesign.html" class="d-block">
+                <img src="./assets/canvasredesign.png" class="img-fluid">
+                <br>
+                <span class="project-name">Canvas Redesign</span>
+            </a>
         </div>
-        <div class="col-lg-4  col-12">
-            <img src="./assets/project3.png" class="img-fluid">
-            <br>
-            <span class="project-name">Visual Mixer</span>
+        <div class="col-lg-4 col-12">
+            <a href="visualmixer.html" class="d-block">
+                <img src="./assets/visualmixer.png" class="img-fluid">
+                <br>
+                <span class="project-name">Visual Mixer</span>
+            </a>
         </div>
     </div>
 
