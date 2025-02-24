@@ -124,6 +124,7 @@ a:hover {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    padding-bottom: 10px;
 }
 
 .zoom-image {
@@ -141,7 +142,14 @@ a:hover {
 .project-name {
     font-size: 17px;
     /* Reduced by 3 units */
-    line-height: 2;
+    line-height: 0;
+}
+
+.projects-specifcation {
+    font-style: italic;
+    font-size: 15px;
+    /* Reduced by 3 units */
+    color: grey;
 }
 
 .contacts-text {
@@ -188,6 +196,12 @@ a:hover {
     .project-name {
         font-size: 15px;
         /* Reduced by 3 units */
+    }
+    .projects-specifcation {
+        font-size: 15px;
+        /* Reduced by 3 units */
+        color: grey;
+        line-height: 2;
     }
     .contacts-text {
         font-size: 13px;
