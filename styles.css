@@ -27,8 +27,8 @@ head {
 }
 
 body {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-top: 60px;
     padding-bottom: 60px;
     position: relative;
@@ -118,13 +118,20 @@ a:hover {
     border-radius: 8px;
 }
 
+.scrolled {
+    /* opacity: 0; Initial opacity for fade-in effect */
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: opacity 1s ease-in-out; /* Transition for fade-in and fade-out */
+    width: 300px;
+}
+
 .image-container {
     overflow: hidden;
     position: relative;
-    width: 100%;
     height: auto;
     border-radius: 8px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .zoom-image {
@@ -143,6 +150,11 @@ a:hover {
     font-size: 17px;
     /* Reduced by 3 units */
     line-height: 0;
+}
+
+.nopaddingcontainer {
+    padding: 0px;
+    margin: 0px;
 }
 
 .projects-specifcation {
@@ -164,6 +176,33 @@ a:hover {
     margin: 40px;
 }
 
+.nobottommargin {
+    margin-bottom: 5px;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.outer {
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+}
+
+.outer div {
+    /* width: 60%; */
+    
+    float: none;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+    zoom: 1;
+    scroll-snap-align: center; /* Snap to center */
+}
 
 /* Media query for smaller screens */
 

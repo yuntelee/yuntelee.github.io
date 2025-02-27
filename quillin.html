@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./assets/Autumn.png" type="image/png">
 
-    <a href="index.html">
+    <a href="/">
         <div class="top-left-image"></div>
     </a>
     <div class="default-divider"></div>
@@ -22,21 +22,62 @@
 
 <body onload="document.body.style.opacity='1'">
 
-    <span class="intro-text">
-        Quillin' is an iOS note app that lets the user asks question based on their handwritten notes.
-        <br>
-        I designed the UI and implemented the front-end using React.js.
+    <span style="font-size: 24px; font-weight:bold">
+        Quillin
+    </span>
+    <span style="font-size: 24px;">
+        is an iOS handwriting note app with AI-powered question-asking and formatting,<br>built with Swift and FastAPI to enhance learning and organization.
+    </span>
 
-        Check out the Figma prototype and what we built during the hackathon!
+    <div class="default-divider"></div>
 
-    
-    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="nobottommargin col-md-10 col-12">
+                <div class="outer">
+                    <div class="image-container"><img src="./assets/quillingallery/Writing Page-1.png" class="scrolled img-fluid" alt="Quillin Figma Prototype"></div>
+                    <div class="image-container"><img src="./assets/quillingallery/Writing Page-2.png" class="scrolled img-fluid" alt="Quillin Figma Prototype"></div>
+                    <div class="image-container"><img src="./assets/quillingallery/Writing Page-3.png" class="scrolled img-fluid" alt="Quillin Figma Prototype"></div>
+                    <div class="image-container"><img src="./assets/quillingallery/Writing Page-4.png" class="scrolled img-fluid" alt="Quillin Figma Prototype"></div>
+                    <div class="image-container"><img src="./assets/quillingallery/Writing Page.png" class="scrolled img-fluid" alt="Quillin Figma Prototype"></div>
+                </div>
+            </div>
+        </div>
+        <div class="default-divider"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+                <span style="font-size: 18px;">
+                    Check out <a href="https://www.figma.com/design/jNVhU4xYZ4UY0JYaEsJZuN/Quillin'?node-id=0-1&t=zaOXpUCpzWlTFjFz-1" class="italic-text" target="_blank"> the Figma wireframe</a> and <a href="https://devpost.com/software/quillin" class="italic-text" target="_blank"> our Hackathon submission</a> 
+                </span>
+            </div>
+        </div>
+    </div>
+
+ 
+
     <span class="contacts-text">
         Contacts<br>
         <a href="mailto:jyl2199@columbia.edu" target="_blank">jyl2199@columbia.edu</a> | <a href="https://linkedin.com/in/jyl2199" target="_blank">linkedin.com/in/jyl2199</a>
     </span>
 
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.img-fluid');
+            // const observer = new IntersectionObserver((entries) => {
+            //     entries.forEach(entry => {
+            //         if (entry.isIntersecting) {
+            //             entry.target.style.opacity = 1;
+            //         } else {
+            //             entry.target.style.opacity = 0.8;
+            //         }
+            //     });
+            // }, { threshold: 0.5 });
 
+            // images.forEach(image => {
+            //     observer.observe(image);
+            // });
+        });
+    </script> -->
 </body>
 
 </html>
