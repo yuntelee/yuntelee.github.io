@@ -2,95 +2,667 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>joshua's portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/JL.png" type="image/png">
+    <title>Joshua Lee</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./assets/Autumn.png" type="image/png">
-
-    <a href="/">
-        <div class="top-left-image"></div>
-    </a>
-    <div class="default-divider"></div>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        *,
+        html {
+            scroll-behavior: smooth !important;
+        }
+        
+        .wrapper {}
+        
+        .sidebar {
+            width: 8.3%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 50px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0);
+        }
+        
+        .main-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            -webkit-overflow-scrolling: auto;
+        }
+        
+        .snap-section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+        
+        .project-section {
+            height: fit-content;
+            /* Restore full viewport height */
+            /* Allow internal scrolling if needed */
+        }
+        
+        .navbar-menu-div {
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+        
+        .navbar-menu-txt {
+            color: #1A1A1A;
+            font-family: Raleway;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+            transition: color 1s, font-size 1s;
+        }
+        
+        .navbar-menu-icon {
+            transition: color 2s
+        }
+        
+        .sidebar svg path {
+            transition: fill 1s ease;
+        }
+        
+        .sidebar.white-text svg path {
+            fill: white;
+        }
+        
+        .navbar-menu-txt:hover {
+            font-size: 17px;
+            color: gray;
+        }
+        
+        h2 {
+            color: #1A1A1A;
+            text-align: center;
+        }
+        /* Custom colors for each section */
+        
+        .snap-section:nth-of-type(1) {
+            /* Targets first <section> */
+            background-color: #F7F5F2;
+        }
+        
+        .snap-section:nth-of-type(2) {
+            /* Targets second <section> */
+            background-color: #1A1A1A;
+        }
+        
+        .snap-section:nth-of-type(3) {
+            /* Targets first <section> */
+            background-color: #F7F5F2;
+        }
+        
+        .snap-section:nth-of-type(4) {
+            /* Targets first <section> */
+            background-color: #F7F5F2;
+        }
+        
+        .snap-section:nth-of-type(5) {
+            /* Targets first <section> */
+            background-color: #F7F5F2;
+        }
+        
+        .intro {
+            color: #1A1A1A;
+            font-family: Raleway;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: normal;
+        }
+        
+        .profile-picture {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .ver-margin {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .ver-margin-dbl {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        iframe {
+            width: 80%;
+            height: 80vh;
+            /* Adjust the height as needed */
+            border: none;
+        }
+        
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .container-padding {
+            margin-left: calc(8.3% + 50px);
+            padding-right: calc(8.3% + 100px);
+            width: calc(91.7% - 50px);
+        }
+        
+        .sidebar.white-text>*:nth-child(n) {
+            color: #F7F5F2
+        }
+        
+        .sidebar.white-text>*:nth-child(1) svg path {
+            fill: #F7F5F2;
+        }
+        
+        .sidebar.white-text .navbar-menu-txt {
+            color: #F7F5F2;
+        }
+        
+        .sidebar.white-text .navbar-menu-txt:hover {
+            color: #a0a0a0;
+        }
+        
+        .note-title {
+            font-size: 30px;
+            color: #F7F5F2;
+            font-style: italic;
+        }
+        
+        .note-body {
+            text-align: left;
+            font-size: 16px;
+            color: #F7F5F2;
+            line-height: 1.5;
+        }
+        
+        .note-from {
+            color: #F7F5F2;
+            font-size: 40px;
+            font-weight: 500;
+        }
+        
+        .note-from-removed {
+            color: #8E8E8E;
+            font-size: 40px;
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+        
+        .note-from,
+        .note-from-removed {
+            font-size: 40px;
+            font-weight: 500;
+            /* Allows vertical spacing */
+            margin: 0 2px;
+            /* Horizontal spacing */
+            letter-spacing: 0.03em;
+            /* Add slight letter spacing */
+        }
+        
+        .note-from-removed {
+            color: #8E8E8E;
+            text-decoration: line-through;
+            position: relative;
+        }
+        
+        .contact-title {
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contact-icons a {
+            color: #1A1A1A;
+            font-size: 30px;
+            margin: 10px;
+            transition: color 0.5s;
+        }
+        
+        .contact-icons a:hover {
+            color: lightblue;
+        }
+        
+        .contact-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            transition: filter 0.5s;
+        }
+        
+        .contact-icons img:hover {
+            filter: brightness(0) saturate(100%) invert(92%) sepia(7%) saturate(747%) hue-rotate(168deg) brightness(95%) contrast(89%);
+        }
+        
+        .proj-desc-container {
+            display: flex;
+            flex-direction: column;
+            /* Stack items vertically */
+            justify-content: center;
+            /* Vertically center the content */
+            align-items: flex-start;
+            /* Horizontally align content to the left */
+            height: 100%;
+            /* Ensure the container takes up the full height of its parent */
+        }
+        
+        .project-type {
+            font-size: 17px;
+            /* Reduced by 3 units */
+            line-height: 0;
+        }
+        
+        .project-desc {
+            font-size: 24px;
+            /* Reduced by 3 units */
+            color: #1A1A1A;
+        }
+        
+        .image-container {
+            overflow: hidden;
+            position: relative;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .zoom-image {
+            display: block;
+            width: 100%;
+            transition: transform 0.5s ease;
+            border-radius: 8px;
+        }
+        
+        .image-container:hover .zoom-image {
+            transform: scale(1.1);
+            border-radius: 8px;
+        }
+        
+        .skills-learnt {
+            width: fit-content;
+            font-size: 12px;
+            margin: 5px;
+            border-radius: 4px;
+            background-color: gray;
+            color: #F7F5F2;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px;
+            padding: 0px;
+        }
+        
+        .line {
+            border: none;
+            border-top: 1px solid lightgray;
+        }
+    </style>
 </head>
 
-<body onload="document.body.style.opacity='1'">
+<body>
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="sidebar navbar-menu-icon">
+                <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="53" height="42" viewBox="0 0 53 42" fill="#">
+                <path d="M25.125 36.2998L32.9452 6.30243L39.622 8.04305L33.328 32.1861L45.9244 35.4699L44.3983 41.3243L25.125 36.2998Z" fill="#1A1A1A" />
+                <path d="M41.361 10.0465C40.5947 12.9858 37.5907 14.7474 34.6514 13.9812C31.7121 13.2149 29.9505 10.2109 30.7167 7.27159C31.483 4.33226 34.487 2.57064 37.4263 3.33691C40.3656 4.10318 42.1273 7.10715 41.361 10.0465Z" fill="#1A1A1A" />
+                <path d="M1.54453 32.75C1.97786 33.05 2.74453 33.4167 3.84453 33.85C4.94453 34.25 6.24453 34.45 7.74453 34.45C9.04453 34.45 10.1112 34.2333 10.9445 33.8C11.7779 33.3333 12.4112 32.65 12.8445 31.75C13.3112 30.85 13.6112 29.6833 13.7445 28.25C13.9112 26.8167 13.9945 25.1 13.9945 23.1V2.5H20.8945V22.55C20.8945 25.2167 20.7445 27.65 20.4445 29.85C20.1445 32.05 19.5612 33.95 18.6945 35.55C17.8279 37.15 16.5112 38.3833 14.7445 39.25C13.0112 40.1167 10.6945 40.55 7.79453 40.55C6.19453 40.55 4.7612 40.3667 3.49453 40C2.22786 39.6333 1.0612 39.0833 -0.00547028 38.35L1.54453 32.75Z" fill="#1A1A1A" />
+                <path d="M23 5.5C23 8.53757 20.5376 11 17.5 11C14.4624 11 12 8.53757 12 5.5C12 2.46243 14.4624 0 17.5 0C20.5376 0 23 2.46243 23 5.5Z" fill="#1A1A1A" />
+            </svg></a>
 
+                <div class="navbar-menu-div"></div>
+                <div class="navbar-menu-div"></div>
 
-    <span class="intro-text">
-        Hey, I’m Joshua! I study CS and music at Columbia.
-        <br>
-        I aim to design intuitive products that can improve people’s day-to-days.
-    </span>
+                <div class="navbar-menu-div"><a href="#intro" class="navbar-menu-txt">Intro</a></div>
+                <div class="navbar-menu-div"><a href="#projects" class="navbar-menu-txt">Projects</a></div>
+                <div class="navbar-menu-div"><a href="#resume" class="navbar-menu-txt">Résumé</a></div>
+                <div class="navbar-menu-div"><a href="#contact" class="navbar-menu-txt">Contact</a></div>
+            </div>
 
-    <div class="default-divider"></div>
-
-    <span class="experience-text">
-        Currently: Marketing Intern at <a href="https://nightly.so/en" target="_blank"><span class="underline">Munice</span> <i class="fas fa-external-link-alt fa-xs"></i></a>
-    </span>
-    <span class="experience-text grey-text">
-        Previously: Summer Analyst at Botticelli Capital and Intern at KOICA
-    </span>
-
-    <div class="default-divider"></div>
-
-    <span class="projects-text">
-        Projects
-    </span>
-
-
-
-
-
-    <div class="default-divider"></div>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <a href="quillin.html">
-                <div class="image-container">
-                    <img src="./assets/quillin2.png" class="img-fluid zoom-image" alt="Quillin">
+            <section id="intro" class="snap-section">
+                <div class="container container-padding">
+                    <div class="row">
+                        <div class="col-md-5 g-0 d-flex align-items-center justify-content-center">
+                            <div class="intro">
+                                Hey, I’m Joshua!<br>
+                                <div class="ver-margin"></div>
+                                I’m an aspiring<br> Product/UX Designer,<br> studying CS + Music<br> at Columbia.
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <img src="./assets/yunte_pfp_neha.png" alt="Profile Picture" class="img-fluid profile-picture">
+                        </div>
+                    </div>
                 </div>
-                <span class="projects-specifcation">DevFest Hackathon 2025</span>
-                <br>
-                <span class="project-name">Quillin'</span>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <a href="canvasredesign.html" class="d-block">
-                <div class="image-container">
-                    <img src="./assets/canvasredesign.png" class="img-fluid zoom-image" alt="Canvas Redesign">
+            </section>
+
+            <section id="about" class="snap-section">
+                <div class="container container-padding">
+                    <div class="row note-title">
+                        <div class="col-md-6 col-12">
+                            Quick note about me...
+                        </div>
+                    </div>
+                    <div class="ver-margin"></div>
+                    <div class="row note-body">
+                        <div class="col-md-7 col-12">
+                            In exploring possible career paths, I spent the summer after my freshman year interning in finance. While I valued the experience and took pride in the magnitude of the impact, I realized I wanted to make a meaningful impact on people’s lives—<em>creating consumer-focused projects that deliver tangible, direct improvements to their daily experiences.</em>
+
+                            <div class="ver-margin"></div>
+                            Now, as I pursue a career in the tech space, my goal is to design intuitive products that <strong>make people’s lives easier</strong> and <strong>a little happier</strong>. </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="ver-margin"></div>
+                        <div class="ver-margin"></div>
+                        <div class="ver-margin"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-12"></div>
+                        <div class="col-md-6 col-12">
+                            <span class="note-from">I am </span>
+                            <span class="note-from-removed">originally</span>
+                            <span class="note-from"> from </span>
+                            <span class="note-from-removed">Virginia, Los Angeles, Seoul, Vientiane, Boston, but now living in</span>
+                            <span class="note-from"> NYC.</span>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
-                <span class="projects-specifcation">Personal Project</span>
-                <br>
-                <span class="project-name">Canvas Redesign</span>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <a href="sunsetmixer.html" class="d-block">
-                <div class="image-container">
-                    <img src="./assets/sunsetmixer.png" class="img-fluid zoom-image" alt="Sunset Mixer">
+            </section>
+
+            <section id="projects" class="snap-section project-section">
+                <div class="container container-padding">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Projects</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ver-margin-dbl"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="proj-desc-container">
+                                <div class="row">
+                                    <span class="projects-type">DevFest Hackathon 2025</span><br>
+                                    <span class="project-desc"><span style="font-weight:600">
+                                        Quillin
+                                    </span>
+                                    <span>
+                                        is an iOS handwriting note app with AI-powered question-asking and formatting, built with Swift and FastAPI to enhance learning and organization.
+                                    </span>
+
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="skills-container">
+                                        <div class="skills-learnt">
+                                            Figma
+                                        </div>
+                                        <div class="skills-learnt">
+                                            Front-end Development
+                                        </div>
+                                        <div class="skills-learnt">
+                                            SwiftUI
+                                        </div>
+                                        <div class="skills-learnt">
+                                            FastAPI
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <a href="quillin.html ">
+                                <div class="image-container">
+                                    <img src="./assets/quillinpfp.png " class="img-fluid zoom-image " alt="Quillin ">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ver-margin-dbl line"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 ">
+                            <a href="canvas.html">
+                                <div class="image-container">
+                                    <img src="./assets/canvaspfp.png " class="img-fluid zoom-image " alt="Quillin ">
+
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="col-6 ">
+                            <div class="proj-desc-container">
+                                <div class="row ">
+                                    <span class="projects-type">Personal case study + Redesign</span><br>
+                                    <span class="project-desc">Canvas Resedign</span>
+                                </div>
+                                <div class="row">
+                                    <div class="skills-container">
+                                        <div class="skills-learnt">
+                                            Figma
+                                        </div>
+                                        <div class="skills-learnt">
+                                            Case study
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="ver-margin-dbl line"></div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-6 ">
+                            <div class="proj-desc-container ">
+                                <div class="row">
+                                    <span class="projects-type ">Personal Project</span><br>
+                                    <span class="project-desc ">
+                                        <span style="font-weight:600">
+                                            Sunset Mixer
+                                        </span> is a web-based interactive audio piece built on p5 and Web Audio API.
+                                    <br> The mountain peaks serve as sliders to adjust the audio mix or to add and remove effects.
+
+
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="skills-container">
+                                        <div class="skills-learnt">
+                                            p5
+                                        </div>
+                                        <div class="skills-learnt">
+                                            JavaScript
+                                        </div>
+                                        <div class="skills-learnt">
+                                            WebAudioAPI
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <a href="https://yuntelee.github.io/audiovisual/">
+                                <div class="image-container">
+                                    <img src="./assets/sunsetpfp.png " class="img-fluid zoom-image " alt="Quillin ">
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="ver-margin-dbl line"></div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-6">
+                            <a href="https://yuntelee.github.io">
+                                <div class="image-container">
+                                    <img src="./assets/thiswebsite.png " class="img-fluid zoom-image " alt="Quillin ">
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <div class="proj-desc-container">
+                                <div class="row">
+                                    <span class="projects-type">Personal Project</span><br>
+
+                                    <span class="project-desc">
+                                        <span>
+                                            I built
+                                        </span>
+                                    <span style="font-weight:600">
+                                         this website 
+                                        </span>
+                                    <span>
+                                            from scratch using HTML, CSS, and JavaScript to demonstrate my fundamental development skills, which enable me to communicate effectively with engineers.
+                                        </span>
+                                    </span>
+
+
+
+
+                                </div>
+                                <div class="row">
+
+                                    <div class="skills-container">
+                                        <div class="skills-learnt">
+                                            Figma
+                                        </div>
+                                        <div class="skills-learnt">
+                                            Front-end Development
+                                        </div>
+                                        <div class="skills-learnt">
+                                            SwiftUI
+                                        </div>
+                                        <div class="skills-learnt">
+                                            FastAPI
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
                 </div>
-                <span class="projects-specifcation">Personal Project</span>
-                <br>
-                <span class="project-name">Sunset Mixer</span>
-            </a>
+            </section>
+
+            <section id="resume " class="snap-section ">
+                <h2>Résumé</h2>
+                <div class="container container-padding ">
+                    <div class="iframe-container">
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vRdpXzIrfH2-g44dCpvGCw13zpUPRXdI9nhSuAVaBXVV06GoV4J0mJpsTmveQZ4uXg6Up379yj2FU1o/pub?embedded=true "></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="contact " class="snap-section ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-12 contact-title ">Feel free to reach out!</div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-12 contact-icons ">
+                            <a href="mailto:jyl2199@columbia.edu "><img src="./assets/mail.svg " alt="Mail "></a>
+                            <a href="https://github.com/yuntelee " target="_blank "><img src="./assets/social-github.svg " alt="GitHub "></a>
+                            <a href="https://www.linkedin.com/in/jyl2199 " target="_blank "><img src="./assets/social-linkedin.svg " alt="LinkedIn "></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "></script>
+    <script>
+        const sections = document.querySelectorAll('.snap-section');
+        const sidebar = document.querySelector('.sidebar');
+        const svgPaths = sidebar.querySelectorAll('svg path');
 
-    <div class="bottom-divider"></div>
+        const observerOptions = {
+            root: document.querySelector('.main-container'),
+            rootMargin: '-25% 0px -25% 0px',
+            threshold: 0.25
+        };
 
-    <span class="contacts-text">
-        Contacts<br>
-        <a href="mailto:jyl2199@columbia.edu" target="_blank">jyl2199@columbia.edu</a> | <a href="https://linkedin.com/in/jyl2199" target="_blank">linkedin.com/in/jyl2199</a>
-    </span>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const sectionId = entry.target.id;
+                const isProjectSection = sectionId === 'projects';
+
+                // Always remove white-text class first
+                sidebar.classList.remove('white-text');
+
+                // Only apply white text for about section
+                if (sectionId === 'about' && entry.isIntersecting) {
+                    sidebar.classList.add('white-text');
+                }
+
+                // Force black color when projects section is active
+                if (isProjectSection && entry.intersectionRatio >= 0.25) {
+                    svgPaths.forEach(path => path.style.fill = '#1A1A1A');
+                }
+            });
+        }, observerOptions);
 
 
+        sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 
 </html>
