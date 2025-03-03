@@ -246,6 +246,20 @@
         .contact-icons img:hover {
             filter: brightness(0) saturate(100%) invert(92%) sepia(7%) saturate(747%) hue-rotate(168deg) brightness(95%) contrast(89%);
         }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn ease-in 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
         /* Media query for smaller screens */
         
         @media (max-width: 1080px) {
@@ -268,7 +282,7 @@
     </style>
 </head>
 
-<body onload="document.body.style.opacity='1'">
+<body>
 
     <div class="wrapper">
         <div class="main-container">
@@ -291,7 +305,7 @@
                 <div class="navbar-menu-div"><a href="./index.html#contact" class="navbar-menu-txt">Contact</a></div>
             </div>
 
-            <section class="snap-section">
+            <section class="snap-section fade-in">
                 <div class="container container-padding">
                     <div class="ver-margin-dbl"></div>
                     <div class="row justify-content-center">
