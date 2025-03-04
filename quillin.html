@@ -26,7 +26,7 @@
             padding: 0;
             overflow: hidden;
             font-family: 'Raleway', sans-serif;
-            background-color: #F7F5F2;
+            background-color: #FBFAF8;
         }
         
         *,
@@ -97,7 +97,7 @@
         }
         
         .sidebar.white-text svg path {
-            fill: white;
+            fill: #FBFAF8;
         }
         
         .navbar-menu-txt:hover {
@@ -179,14 +179,6 @@
             /* Enable scroll snapping */
         }
         
-        .outer .image-container {
-            display: inline-block;
-            height: 100%;
-            /* Match the height of the outer container */
-            scroll-snap-align: center;
-            /* Snap to center */
-        }
-        
         .img-fluid {
             height: 100%;
             /* Make images fit vertically inside the outer container */
@@ -252,6 +244,18 @@
             animation: fadeIn ease-in 1s forwards;
         }
         
+        li {
+            line-height: 1.5;
+        }
+        
+        ul {
+            font-size: 50%;
+        }
+        
+        ul span {
+            font-size: 200%;
+        }
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -297,39 +301,191 @@
                 <div class="navbar-menu-div"></div>
                 <div class="navbar-menu-div"></div>
 
-                <div class="navbar-menu-div"><a href="./index.html#intro" class="navbar-menu-txt">Intro</a></div>
-                <div class="navbar-menu-div "><a href="./index.html#projects" class="navbar-menu-txt">Projects</a></div>
-                <div class=" proj-name"><a href="./quillin.html" class="navbar-menu-txt"><span style="font-size: 13px;">Quillin</span></a></div>
-                <div class=" proj-name"><a href="./canvas.html" class="navbar-menu-txt"><span style="font-size: 13px;">Canvas</span></a></div>
-                <div class="navbar-menu-div"><a href="./index.html#resume" class="navbar-menu-txt">Résumé</a></div>
-                <div class="navbar-menu-div"><a href="./index.html#contact" class="navbar-menu-txt">Contact</a></div>
+                <div class="navbar-menu-div"><a href="./#intro" class="navbar-menu-txt">Intro</a></div>
+                <div class="navbar-menu-div "><a href="./#projects" class="navbar-menu-txt">Projects</a></div>
+                <div class="proj-name">
+                    <a href="./quillin.html" class="navbar-menu-txt">
+                        <li>Quillin</li>
+
+                    </a>
+                    <a href="./canvas.html" class="navbar-menu-txt">
+                        <li>Canvas</li>
+                    </a>
+                </div>
+
+                <div class="navbar-menu-div"><a href="./#resume" class="navbar-menu-txt">Résumé</a></div>
+                <div class="navbar-menu-div"><a href="./#contact" class="navbar-menu-txt">Contact</a></div>
             </div>
 
             <section class="snap-section fade-in">
                 <div class="container container-padding">
-                    <div class="ver-margin-dbl"></div>
+
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <span style="font-size: 24px; font-weight:600">
+                            <h2 style="text-align: left;">
+                                <span style="font-weight:600">
                                 Quillin 
-                            </span>
-                            <span style="font-size: 24px; font-weight:400">
-                            is an iOS handwriting note app with AI-powered question-asking and formatting, built with Swift and FastAPI to enhance learning and organization.
-                            </span>
+                                </span>
+                                <span style="font-weight:400">
+                                is an iOS handwriting note app with OCR and LLM-based question-asking, built with Swift and FastAPI.
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl"></div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <div class="line ver-margin-dbl"></div>
+                            <div class="ver-margin-dbl"></div>
                         </div>
                     </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-7 col-12">
+                            <h3>
+                                Standardized Interface & Mental Models
+                            </h3>
+                            <p>
+                                Following UI conventions from apps like Notability and GoodNotes aligns with <span style="font-weight: 600">Jakob’s Law</span>—users prefer familiar designs. The use of pre-existing mental models reduces cognitive load,
+                                making the app intuitive. Standardized layouts enhance usability by matching user expectations, preventing unnecessary confusion.
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <img src="./assets/quillingallery/quillin2.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-3 col-12">
+
+                            <img src="./assets/quillingallery/retracting.gif " class="scrolled img-fluid " style="border-radius: 17px " alt="Quillin Figma Prototype ">
+
+                        </div>
+
+                        <div class="col-md-7 col-12 ">
+
+                            <h3>
+                                LLM Interface Placement: Space & Accessibility
+                            </h3>
+                            <div class="ver-margin-dbl "></div>
+                            <h4>
+                                Vertical Mode
+                            </h4>
+                            <p>
+                                Embedding a retractable LLM interface follows <span style="font-weight: 600; ">Fitts’s Law,</span> optimizing ease of access without cluttering the canvas. A collapsible design ensures the chatbot is available when needed
+                                while maintaining focus on note-taking.
+                            </p>
+                            <h4>
+                                Landscape Mode
+                            </h4>
+                            <p>
+                                A side-slide-out chatbot aligns with ergonomic habits—users don’t fully utilize horizontal space when writing notes by hand, especially on the side of their dominant hand.
+                            </p>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="row justify-content-center ">
+                        <div class="col-md-10 col-12 ">
+                            <div class="ver-margin-dbl line "></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+
+
+                        <div class="col-md-7 col-12 ">
+                            <h3>
+                                Simplifying Interaction: Minimizing Effort
+                            </h3>
+                            <p>
+                                While writing notes with Quillin’, you ask the chatbot a question, but the response doesn’t fully meet your needs. In a crowded lecture hall with small fold-up desks, setting down your Apple Pencil to type a follow-up may not be practical. To address
+                                this, we designed an implementation that presents three AI-suggested clarifying questions, anticipating what you’re likely to ask.
+
+
+
+
+
+
+
+
+                            </p>
+                            <h3>
+                                UX Strategy
+                            </h3>
+                            <p>
+                                Our design applies <span style="font-weight: 600;">Jakob’s Law</span> for familiarity, <span style="font-weight: 600;">Fitts’s Law</span> for chatbot accessibility, and <span style="font-weight: 600;">simplicity principles</span>                                for interaction, creating a seamless experience. Retractable and slide-out elements respect different orientations while keeping AI assistance unobtrusive. By grounding these choices in UX laws, your design is both intuitive
+                                and defensible for future iterations.
+
+                            </p>
+
+                            <span style="font-size: 18px; text-decoration: underline;">
+                                Check out <a href="https://www.figma.com/design/jNVhU4xYZ4UY0JYaEsJZuN/Quillin '?node-id=0-1&t=zaOXpUCpzWlTFjFz-1" class="italic-text" target="_blank"> the Figma wireframe</a> and <a href="https://devpost.com/software/quillin" class="italic-text" target="_blank"> our Hackathon submission</a> 
+                            </span>
+
+
+
+
+
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <img src="./assets/quillingallery/example questions.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl"></div>
+                        </div>
+                    </div>
+
+
+
+
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
                             <div class="outer">
+
+                                <img src="./assets/quillingallery/Writing Page-2.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Writing Page-3.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Writing Page-4.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+
+                                <img src="./assets/quillingallery/Awesome Folder - New Folder.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Awesome Folder - New Notepad.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Awesome Folder.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Home - New Folder.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Home - New Notepad.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Home.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+
                                 <img src="./assets/quillingallery/Writing Page-1.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
                                 <img src="./assets/quillingallery/Writing Page-2.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
                                 <img src="./assets/quillingallery/Writing Page-3.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
                                 <img src="./assets/quillingallery/Writing Page-4.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
+                                <img src="./assets/quillingallery/Writing Page-5.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
                                 <img src="./assets/quillingallery/Writing Page.png" class="scrolled img-fluid" alt="Quillin Figma Prototype">
                             </div>
                         </div>
@@ -342,9 +498,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-12">
-                            <span style="font-size: 18px;">
-                                Check out <a href="https://www.figma.com/design/jNVhU4xYZ4UY0JYaEsJZuN/Quillin'?node-id=0-1&t=zaOXpUCpzWlTFjFz-1" class="italic-text" target="_blank"> the Figma wireframe</a> and <a href="https://devpost.com/software/quillin" class="italic-text" target="_blank"> our Hackathon submission</a> 
-                            </span>
+
                         </div>
                     </div>
                     <div class="row justify-content-center">

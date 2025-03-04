@@ -26,7 +26,7 @@
             padding: 0;
             overflow: hidden;
             font-family: 'Raleway', sans-serif;
-            background-color: #F7F5F2;
+            background-color: #FBFAF8;
         }
         
         *,
@@ -44,6 +44,10 @@
             margin: 50px;
             z-index: 1000;
             background: rgba(255, 255, 255, 0);
+        }
+        
+        li {
+            line-height: 1.5;
         }
         
         .main-container {
@@ -91,7 +95,7 @@
         }
         
         .sidebar.white-text svg path {
-            fill: white;
+            fill: #FBFAF8;
         }
         
         .navbar-menu-txt:hover {
@@ -101,7 +105,7 @@
         
         h2 {
             color: #1A1A1A;
-            text-align: center;
+            text-align: left;
         }
         
         body.fade-in {
@@ -228,6 +232,10 @@
             animation: fadeIn ease-in 1s forwards;
         }
         
+        strong {
+            font-weight: 600;
+        }
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -272,138 +280,183 @@
                 <div class="navbar-menu-div"></div>
                 <div class="navbar-menu-div"></div>
 
-                <div class="navbar-menu-div"><a href="./index.html#intro" class="navbar-menu-txt">Intro</a></div>
-                <div class="navbar-menu-div "><a href="./index.html#projects" class="navbar-menu-txt">Projects</a></div>
-                <div class=" proj-name"><a href="./quillin.html" class="navbar-menu-txt"><span style="font-size: 13px;">Quillin</span></a></div>
-                <div class=" proj-name"><a href="./canvas.html" class="navbar-menu-txt"><span style="font-size: 13px;">Canvas</span></a></div>
-                <div class="navbar-menu-div"><a href="./index.html#resume" class="navbar-menu-txt">Résumé</a></div>
-                <div class="navbar-menu-div"><a href="./index.html#contact" class="navbar-menu-txt">Contact</a></div>
+                <div class="navbar-menu-div"><a href="./#intro" class="navbar-menu-txt">Intro</a></div>
+                <div class="navbar-menu-div "><a href="./#projects" class="navbar-menu-txt">Projects</a></div>
+                <div class="proj-name">
+                    <a href="./quillin.html" class="navbar-menu-txt">
+                        <li>Quillin</li>
+
+                    </a>
+                    <a href="./canvas.html" class="navbar-menu-txt">
+                        <li>Canvas</li>
+                    </a>
+                </div>
+
+                <div class="navbar-menu-div"><a href="./#resume" class="navbar-menu-txt">Résumé</a></div>
+                <div class="navbar-menu-div"><a href="./#contact" class="navbar-menu-txt">Contact</a></div>
             </div>
+
 
             <section class="snap-section fade-in">
                 <div class="container container-padding">
-                    <div class="ver-margin-dbl"></div>
-                    <div class="row">
-                        <div class="col-md-1 col-0"></div>
+                    <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <span style="font-size: 24px; font-weight:600">
-                                Canvas
-                            </span>
-                            <span style="font-size: 24px;">
-                                is the course management system used at Columbia University. When I first started using Canvas, I found its interface frustrating:
-                            </span>
-
-                            <span style="font-size: 24px; font-style: italic;">the platform feels cluttered.</span>
-                            <div class="default-divider"></div>
-
-                            <span style="font-size: 16.5px;">
-                                There are too many buttons and pages that are rarely used but still take up space, leading to accidental clicks. A lot of information shown is unnecessary for day-to-day tasks and could be removed for a cleaner experience. In general, Canvas follows a maximalist design that compromises usability.
-                            </span>
-
-                            <div class="default-divider"></div>
-
-
-                            <span style="font-size: 21px;">Course List</span>
-                            <div class="ver-margin-dbl"></div>
-
+                            <h2>UX Laws Analysis: Canvas LMS Redesign</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <h4>Canvas is the course management system used at Columbia University. When I first started using Canvas, I found its interface frustrating: <span style="font-style: italic;">the platform feels cluttered.</span>
+                            </h4>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-1 col-0"></div>
-                        <div class="col-md-5 col-12 mx-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+
+
+
+                            <p>By using Hick’s Law, we simplified decision-making by reducing the number of choices presented at any given moment. Progressive Disclosure allowed us to reveal information only when necessary, preventing users from being bombarded
+                                with irrelevant details upfront. Additionally, optimizing the Signal-to-Noise Ratio helped eliminate unnecessary elements, ensuring that essential content remained prominent and easily accessible.
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <h3>1. Course List Redesign (Information Hierarchy & User Recognition)</h3>
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-5 col-12">
                             <img src="./assets/canvasredesignpngs/ogcl.png" class="img-fluid" alt="Original Course List" style="width: 100%; height: auto;">
                         </div>
-                        <div class="col-md-5 col-12 mx-auto">
+                        <div class="col-md-5 col-12">
 
                             <img src="./assets/canvasredesignpngs/rdcl.png" class="img-fluid" alt="Redesigned Course List" style="width: 100%; height: auto;">
                         </div>
-                        <div class="col-md-1 col-0"></div>
                     </div>
-                    <div class="ver-margin-dbl"></div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10 col-0">
-                            <span style="font-size: 16.5px;">
-                                    The design on the right is my redesign of the course list. In the original version, some elements were overly emphasized while more important information was overlooked.
-                                    <div class="default-divider"></div>
-                                    For example, the three-slot semester banner took up too much space. I simplified it into a dropdown menu in the top right corner for better accessibility.
-                                    <div class="default-divider"></div>
-                                    The “Reflects Registrar changes” text was also too prominent. I found it useful only during the shopping period, so I made it smaller and lighter at the bottom of the page to minimize distraction.
-                                    <div class="default-divider"></div>
-                                    Another unnecessary detail was the course number, which I removed. Instead, I included class times to help users differentiate between classes, as times are more intuitive than administrative codes.
-                                    <div class="default-divider"></div>
-                                    I also added a "Next Assignment" feature that displays the upcoming assignment and its due date. If an assignment is due the next day, the text is bolded to draw attention, helping students keep track of deadlines.
-                                </span>
-                            <div class="default-divider"></div>
-
-                            <span style="font-size: 21px;">Individual Course Page</span>
-                            <div class="default-divider"></div>
-                            <span style="font-size: 16.5px;">
-                                    The individual course page can be very confusing to both faculty user.  
-                                    <div class="default-divider"></div>
-                                    For example, what should be in the “home” page of the individual course? Should it be a course description, the exam schedules, office hours? But if thats just information about the course, what should go in the “Course Info” page? And how does that differ from the syllabus?
-                                    <div class="default-divider"></div>
-                                    I always find myself clicking so many different pages just trying to look for my midterm schedules on the course page. In my redesign, I aimed to limit the options that faculty and students could use to improve usability.
-                                    <div class="default-divider"></div>
-                                    I created a dedicated syllabus page for all things that faculty may consider course information, or information that would usually go on a syllabus paper, e.g. course schedule, course description, course time, textbooks, etc.
-                                    <div class="default-divider"></div>
-                                    I also made the landing page when the user select the course to be the assignments page because, it is the most mission critical page by far.
-                                    <div class="default-divider"></div>
-                                    For the other pages, I kept the theme of decluttering in the pages and substituting details for useful information. 
-                                </span>
-                            <div class="default-divider"></div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl"></div>
                         </div>
                     </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <p><strong>Problem:</strong> Semester banners and course numbers took up too much space, and important information (class times, assignments) was not easily accessible.</p>
+                            <p><strong>UX Principles Applied:</strong></p>
+                            <ul>
+                                <li><strong>Recognition Over Recall</strong> – Uses class times instead of course numbers for easier recognition.</li>
+                                <li><strong>Von Restorff Effect</strong> – Highlights urgent assignments for immediate attention.</li>
+                                <li><strong>Pareto Principle (80/20 Rule)</strong> – Focuses on the most-used features first.</li>
+                            </ul>
+                            <p><strong>Solution:</strong> Moved semester banners to a dropdown, displayed class times instead of course numbers, and bolded “Next Assignment” deadlines.</p>
+                        </div>
 
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <h3>2. Individual Course Page Redesign (Navigation & Content Organization)</h3>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-md-1"></div>
-
-                        <div class="col-md-5 col-12 mx-auto">
-
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 col-12">
                             <img src="./assets/canvasredesignpngs/ogcp.png" class="img-fluid" alt="Original Course Page" style="width: 100%; height: auto;">
-
                         </div>
-                        <div class="col-md-5 col-12 mx-auto">
+                        <div class="col-md-5 col-12">
                             <img src="./assets/canvasredesignpngs/rdcp.png" class="img-fluid" alt="Redesigned Course Page" style="width: 100%; height: auto;">
                         </div>
-                        <div class="col-md-1"></div>
 
                     </div>
-                    <div class="row ">
+                    <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <div class=" ver-margin-dbl"></div>
+                            <div class="ver-margin-dbl"></div>
                         </div>
                     </div>
-
-
-                    <div class="row">
-
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10 mx-auto">
-                            <span style="font-size: 21px;">Wireframes</span>
-                        </div>
-                        <div class="col-md-1"></div>
-                    </div>
-
-
-                    <div class="row ">
+                    <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <div class=" ver-margin-dbl"></div>
+                            <p><strong>Problem:</strong> Confusing structure with unclear distinctions between "Home," "Course Info," and "Syllabus." Assignments were buried, requiring extra clicks.</p>
+                            <p><strong>UX Principles Applied:</strong></p>
+                            <ul>
+                                <li><strong>Least Surprise Principle</strong> – Matches navigation to user expectations.</li>
+                                <li><strong>Goal-Gradient Effect</strong> – Prioritizes assignments upfront to boost task completion.</li>
+                                <li><strong>Gestalt’s Principle of Proximity</strong> – Groups related course details together for clarity.</li>
+                            </ul>
+                            <p><strong>Solution:</strong> Made "Assignments" the default landing page, created a dedicated syllabus page, and organized content logically.</p>
+                        </div>
+
+
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="nobottommargin col-10">
-                            <div class="outer">
-                                <img src="./assets/canvasredesignpngs/cal.png" class="scrolled img-fluid" alt="Calendar Wireframe" style="width: 50%; height: auto;">
-                                <img src="./assets/canvasredesignpngs/db.png" class="scrolled img-fluid" alt="Dashboard Wireframe" style="width: 50%; height: auto;">
-                                <img src="./assets/canvasredesignpngs/groups.png" class="scrolled img-fluid" alt="Groups Wireframe" style="width: 50%; height: auto;">
-                                <img src="./assets/canvasredesignpngs/inbox.png" class="scrolled img-fluid" alt="Inbox Wireframe" style="width: 50%; height: auto;">
-                            </div>
+                    <div class="row justify-content-center align-items-center">
+
+
+                        <div class="col-md-5 col-12">
+                            <img src="./assets/canvasredesignpngs/db.png" class="scrolled img-fluid" alt="Dashboard" style="width: 100%; height: auto;">
+
+
+
                         </div>
-                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5 col-12">
+                            <h3>3. Minimizing Complexity</h3>
+                            <p><strong>Guiding UX Laws:</strong></p>
+                            <ul>
+                                <li><strong>Tesler’s Law of Complexity</strong> – Managed inherent complexity by simplifying the interface.</li>
+                                <li><strong>Miller’s Law (7±2 Rule)</strong> – Limited the amount of information displayed at once.</li>
+                                <li><strong>Dieter Rams’ Principle</strong> – "Good design is as little design as possible." </li>
+                            </ul>
+                            <p><strong>Outcome:</strong> Transformed Canvas into a user-centered platform with intuitive navigation, reduced friction, and clearer task flows.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 col-12">
+                            <div class="ver-margin-dbl line"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-12">
+
+                            <h3>Final Takeaway:</h3>
+                            <p>By applying these UX principles, the redesign shifts Canvas from a high-friction system to an efficient, student-friendly learning tool. The result is a minimalist, goal-oriented interface that streamlines the learning experience.</p>
+                        </div>
+
+                        <div class="col-md-3 col-12" style="padding: 10px">
+                            <img src="./assets/canvasredesignpngs/cal.png" class="scrolled img-fluid" alt="Calendar Wireframe" style="width: 100%; height: auto;">
+
+
+                        </div>
+                        <div class="col-md-3 col-12" style="padding: 10px">
+                            <img src="./assets/canvasredesignpngs/groups.png" class="scrolled img-fluid" alt="Groups" style="width: 100%; height: auto;">
+
+                        </div>
+
                     </div>
                 </div>
 

@@ -35,7 +35,8 @@ html {
     left: 0;
     margin: 50px;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0);
+    background: rgba(251, 250, 248, 0);
+    /* Updated color */
 }
 
 .main-container {
@@ -85,7 +86,8 @@ html {
 }
 
 .sidebar.white-text svg path {
-    fill: white;
+    fill: #FBFAF8;
+    /* Updated color */
 }
 
 .navbar-menu-txt:hover {
@@ -103,7 +105,8 @@ h2 {
 
 .snap-section:nth-of-type(1) {
     /* Targets first <section> */
-    background-color: #F7F5F2;
+    background-color: #FBFAF8;
+    /* Updated color */
 }
 
 .snap-section:nth-of-type(2) {
@@ -113,17 +116,20 @@ h2 {
 
 .snap-section:nth-of-type(3) {
     /* Targets first <section> */
-    background-color: #F7F5F2;
+    background-color: #FBFAF8;
+    /* Updated color */
 }
 
 .snap-section:nth-of-type(4) {
     /* Targets first <section> */
-    background-color: #F7F5F2;
+    background-color: #FBFAF8;
+    /* Updated color */
 }
 
 .snap-section:nth-of-type(5) {
     /* Targets first <section> */
-    background-color: #F7F5F2;
+    background-color: #FBFAF8;
+    /* Updated color */
 }
 
 .intro {
@@ -131,8 +137,12 @@ h2 {
     font-family: Raleway;
     font-size: 40px;
     font-style: normal;
-    font-weight: 550;
+    font-weight: 400;
     line-height: normal;
+}
+
+strong {
+    font-weight: 550;
 }
 
 .profile-picture {
@@ -171,15 +181,18 @@ iframe {
 }
 
 .sidebar.white-text>*:nth-child(n) {
-    color: #F7F5F2
+    color: #FBFAF8;
+    /* Updated color */
 }
 
 .sidebar.white-text>*:nth-child(1) svg path {
-    fill: #F7F5F2;
+    fill: #FBFAF8;
+    /* Updated color */
 }
 
 .sidebar.white-text .navbar-menu-txt {
-    color: #F7F5F2;
+    color: #FBFAF8;
+    /* Updated color */
 }
 
 .sidebar.white-text .navbar-menu-txt:hover {
@@ -188,19 +201,22 @@ iframe {
 
 .note-title {
     font-size: 30px;
-    color: #F7F5F2;
+    color: #FBFAF8;
+    /* Updated color */
     font-style: italic;
 }
 
 .note-body {
     text-align: left;
     font-size: 16px;
-    color: #F7F5F2;
+    color: #FBFAF8;
+    /* Updated color */
     line-height: 1.5;
 }
 
 .note-from {
-    color: #F7F5F2;
+    color: #FBFAF8;
+    /* Updated color */
     font-size: 40px;
     font-weight: 500;
 }
@@ -313,7 +329,8 @@ iframe {
     margin: 5px;
     border-radius: 4px;
     background-color: gray;
-    color: #F7F5F2;
+    color: #FBFAF8;
+    /* Updated color */
     padding-right: 5px;
     padding-left: 5px;
 }
