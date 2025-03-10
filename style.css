@@ -218,7 +218,7 @@ iframe {
     color: #FBFAF8;
     /* Updated color */
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 350;
 }
 
 
@@ -226,18 +226,15 @@ iframe {
 .note-from,
 .note-from-removed {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 350;
     /* Allows vertical spacing */
-    margin: 0 2px;
-    /* Horizontal spacing */
-    letter-spacing: 0.03em;
-    /* Add slight letter spacing */
+
 }
 .note-from-removed {
     color: #FBFAF8;
     /* Updated color */
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 350;
 }
 
 .contact-title {

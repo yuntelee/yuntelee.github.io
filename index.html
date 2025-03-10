@@ -100,8 +100,8 @@
                             <span class="note-from">I am </span>
                             <span class="note-from-removed">originally</span>
                             <span class="note-from"> from </span>
-                            <span class="note-from-removed">Virginia, Los Angeles, Seoul, Vientiane, Boston, but now living in</span>
-                            <span class="note-from"> NYC.</span>
+                            <span class="note-from-removed">Virginia, Los&nbsp;Angeles, Seoul, Vientiane, Boston, but now living in </span>
+                            <span class="note-from">NYC.</span>
                         </div>
 
                     </div>
@@ -159,8 +159,8 @@
                         </div>
                         <div class="col-4">
                             <a href="quillin.html ">
-                                <div class="image-container">
-                                    <img src="./assets/quillinpfp.png " class="img-fluid zoom-image " alt="Quillin ">
+                                <div class="image-container" style="border-radius: 22px;">
+                                    <img src="./assets/quillin pfp 2.gif" class="img-fluid zoom-image" alt="Quillin">
                                 </div>
                             </a>
                         </div>
@@ -172,7 +172,7 @@
                         <div class="col-6 ">
                             <a href="canvas.html">
                                 <div class="image-container">
-                                    <img src="./assets/canvaspfp.png " class="img-fluid zoom-image " alt="Quillin ">
+                                    <img src="./assets/canvaspfp.png " class="img-fluid zoom-image " alt="Quillin">
 
                                 </div>
                             </a>
@@ -181,7 +181,7 @@
                         <div class="col-6 ">
                             <div class="proj-desc-container">
                                 <div class="row ">
-                                    <span class="projects-type">Personal case study + Redesign</span><br>
+                                    <span class="projects-type">Case study + Redesign</span><br>
                                     <span class="project-desc">
                                         <span style="font-weight:550">
                                             Canvas Redesign
@@ -376,8 +376,8 @@
             removedSpans.forEach((span, index) => {
                 setTimeout(() => {
                     console.log("Starting deletion on span:", span.textContent);
-                    deleteTextOneByOne(span, 80);
-                }, index * 3000);
+                    deleteTextOneByOne(span, 60);
+                }, index * 2000);
             });
         });
 
@@ -415,25 +415,7 @@
             }, speed);
         }
 
-        /**
-         * Adds the specified number of spaces, one by one, in front of the element's text.
-         */
-        function addSpacesOneByOne(element, speed, spaceCount) {
-            const targetText = element.textContent.trimStart(); // remove any existing leading whitespace
-            let added = 0;
-            let prefix = "";
-
-            const spaceInterval = setInterval(() => {
-                if (added >= spaceCount) {
-                    clearInterval(spaceInterval);
-                    element.textContent = prefix + targetText;
-                } else {
-                    prefix += " ";
-                    element.textContent = prefix + targetText;
-                    added++;
-                }
-            }, speed);
-        }
+    
     </script>
 </body>
 
