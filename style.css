@@ -221,12 +221,7 @@ iframe {
     font-weight: 500;
 }
 
-.note-from-removed {
-    color: #8E8E8E;
-    font-size: 40px;
-    text-decoration: line-through;
-    font-weight: 500;
-}
+
 
 .note-from,
 .note-from-removed {
@@ -238,11 +233,11 @@ iframe {
     letter-spacing: 0.03em;
     /* Add slight letter spacing */
 }
-
 .note-from-removed {
-    color: #8E8E8E;
-    text-decoration: line-through;
-    position: relative;
+    color: #FBFAF8;
+    /* Updated color */
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .contact-title {
