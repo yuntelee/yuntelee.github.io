@@ -48,6 +48,7 @@
                 <div class="navbar-menu-div"><a href="#intro" class="navbar-menu-txt">Intro</a></div>
                 <div class="navbar-menu-div"><a href="#projects" class="navbar-menu-txt">Projects</a></div>
                 <div class="navbar-menu-div"><a href="#resume" class="navbar-menu-txt">Résumé</a></div>
+                <div class="navbar-menu-div"><a href="#about" class="navbar-menu-txt">About</a></div>
                 <div class="navbar-menu-div"><a href="#contact" class="navbar-menu-txt">Contact</a></div>
             </div>
 
@@ -66,48 +67,6 @@
                             <img src="./assets/yunte_pfp_neha.png" alt="Profile Picture" class="img-fluid profile-picture">
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="about" class="snap-section">
-                <div class="container container-padding">
-                    <div class="row note-title">
-                        <div class="col-md-6 col-12">
-                            Quick note about me...
-                        </div>
-                    </div>
-                    <div class="ver-margin"></div>
-                    <div class="row note-body">
-                        <div class="col-md-7 col-12">
-                            I'm a current sophomore, looking forward to a career designing <i>consumer-focused products</i> that make people's days easier and a little better.
-                            <div class="ver-margin"></div>
-                            Some activities I enjoy include making music 🎤, cooking 🍲, and playing squash 👟!
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-                        <div class="ver-margin"></div>
-                        <div class="ver-margin"></div>
-                        <div class="ver-margin"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-7 col-12"></div>
-                        <div class="col-md-5 col-12">
-                            <span class="note-from">I am </span>
-                            <span class="note-from-removed">originally</span>
-                            <span class="note-from"> from </span>
-                            <span class="note-from-removed">Virginia, Los&nbsp;Angeles, Seoul, Vientiane, Boston, but now living in </span>
-                            <span class="note-from">NYC.</span>
-                        </div>
-
-                    </div>
-
-
-
                 </div>
             </section>
 
@@ -316,6 +275,54 @@
 
             </section>
 
+            <section id="about" class="snap-section ">
+                <div class="container container-padding">
+
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4 col-12">
+                            <div class="about-image-container">
+                                <img src="./assets/Group 1.png" alt="Collage" class="img-fluid about-image">
+                            </div>
+                        </div>
+                
+                        <div class="col-md-6 col-12 justify-content-center">
+
+                            <div>
+                                <span class="about-title">Quick note about me...</span>
+                                <div class="ver-margin-dbl"></div>
+                                <span class="about-desc">
+                                    I'm a current sophomore, looking forward to a career designing <i>user-focused products</i> that make people's days easier and a little better.
+                                    <div class="ver-margin-dbl"></div>
+                                    Some activities I enjoy include making music 🎤, cooking 🍲, and playing squash 👟!
+    
+                                </span>
+                               
+    
+                                <div class="ver-margin-dbl"></div>
+    
+                                <span class="note-from">I am </span>
+                                <span class="note-from-removed">originally</span>
+                                <span class="note-from"> from </span>
+                                <span class="note-from-removed">Virginia, Los&nbsp;Angeles, Seoul, Vientiane, Boston, but now living in </span>
+                                <span class="note-from">NYC.</span>
+                            </div>
+
+                            
+
+
+                        </div>
+                    </div>
+
+                   
+                    
+
+
+
+                </div>
+
+                
+            </section>
+
             <section id="contact" class="snap-section ">
                 <div class="container ">
                     <div class="row ">
@@ -330,6 +337,9 @@
                     </div>
                 </div>
             </section>
+
+
+
         </div>
     </div>
 
@@ -347,25 +357,36 @@
         };
 
         const observer = new IntersectionObserver((entries) => {
+            let aboutVisible = false;
+            let projectVisible = false;
+
+            // Figure out which sections are in view
             entries.forEach(entry => {
-                const sectionId = entry.target.id;
-                const isProjectSection = sectionId === 'projects';
-
-                // Always remove white-text class first
-                sidebar.classList.remove('white-text');
-
-                // Only apply white text for about section
-                if (sectionId === 'about' && entry.isIntersecting) {
-                    sidebar.classList.add('white-text');
-                }
-
-                // Force black color when projects section is active
-                if (isProjectSection && entry.intersectionRatio >= 0.25) {
-                    svgPaths.forEach(path => path.style.fill = '#1A1A1A');
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'about') {
+                        aboutVisible = true;
+                    } 
+                    else if (entry.target.id === 'projects' && entry.intersectionRatio >= 0.25) {
+                        projectVisible = true;
+                    }
                 }
             });
-        }, observerOptions);
 
+            // Now apply the sidebar color logic once
+            if (aboutVisible) {
+                sidebar.classList.add('white-text');
+            } else {
+                sidebar.classList.remove('white-text');
+            }
+
+            // If project is visible at least 25%, force black icons
+            if (projectVisible) {
+                svgPaths.forEach(path => path.style.fill = '#1A1A1A');
+            } else {
+                // If no special condition, revert your icons or leave them as-is
+                svgPaths.forEach(path => path.style.fill = '');
+            }
+        }, observerOptions);
 
         sections.forEach(section => observer.observe(section));
 

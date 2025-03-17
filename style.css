@@ -55,6 +55,14 @@ html {
     padding: 50px;
 }
 
+.snap-section-note {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
 .project-section {
     height: fit-content;
     /* Restore full viewport height */
@@ -111,7 +119,7 @@ h2 {
 
 .snap-section:nth-of-type(2) {
     /* Targets second <section> */
-    background-color: #1A1A1A;
+    background-color: #FBFAF8;
 }
 
 .snap-section:nth-of-type(3) {
@@ -120,15 +128,11 @@ h2 {
     /* Updated color */
 }
 
+
 .snap-section:nth-of-type(4) {
     /* Targets first <section> */
-    background-color: #FBFAF8;
-    /* Updated color */
-}
-
-.snap-section:nth-of-type(5) {
-    /* Targets first <section> */
-    background-color: #FBFAF8;
+    background-color: #1A1A1A;
+   
     /* Updated color */
 }
 
@@ -206,6 +210,17 @@ iframe {
     font-style: italic;
 }
 
+.about-title {
+    font-size: 25px;
+    color: #FBFAF8;
+    font-style: italic;
+}
+
+.about-desc {
+    font-size: 16px;
+    color: #FBFAF8;
+}
+
 .note-body {
     text-align: left;
     font-size: 16px;
@@ -217,7 +232,7 @@ iframe {
 .note-from {
     color: #FBFAF8;
     /* Updated color */
-    font-size: 40px;
+    font-size: 16px;
     font-weight: 350;
 }
 
@@ -225,7 +240,7 @@ iframe {
 
 .note-from,
 .note-from-removed {
-    font-size: 40px;
+    font-size:16px;
     font-weight: 350;
     /* Allows vertical spacing */
 
@@ -233,7 +248,7 @@ iframe {
 .note-from-removed {
     color: #FBFAF8;
     /* Updated color */
-    font-size: 40px;
+    font-size:16px;
     font-weight: 350;
 }
 
@@ -244,13 +259,14 @@ iframe {
 }
 
 .contact-icons {
+    fill: #FBFAF8;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contact-icons a {
-    color: #1A1A1A;
+    color: #FBFAF8;
     font-size: 30px;
     margin: 10px;
     transition: color 0.5s;
@@ -338,4 +354,9 @@ iframe {
 .line {
     border: none;
     border-top: 1px solid lightgray;
+}
+
+/* Keep the right column tall so removing text won't collapse the layout */
+#about .col-md-7 {
+    min-height: 300px; /* adjust as needed */
 }
